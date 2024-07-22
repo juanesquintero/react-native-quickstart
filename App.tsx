@@ -6,6 +6,7 @@ import {
   Image,
   Button,
   TouchableHighlight,
+  Pressable,
 } from "react-native";
 import icon from "./assets/icon.png";
 
@@ -41,6 +42,25 @@ export default function App() {
       >
         <Text>Long press me!</Text>
       </TouchableHighlight>
+
+      <Pressable
+        style={(pressed) => ({
+          padding: 10,
+          marginTop: 30,
+          width: 110,
+          borderWidth: 1.5,
+          borderColor: "green",
+          backgroundColor: pressed ? "green" : "white",
+        })}
+        onPressIn={() => {
+          alert("Hello, I'm a Pressable");
+        }}
+        onPressOut={() => {
+          alert("Bye Pressable");
+        }}
+      >
+        <Text>Press Me & Unpress Me</Text>
+      </Pressable>
     </View>
   );
 }
