@@ -52,12 +52,13 @@ export default function App() {
       {/* costumizable */}
 
       <Pressable
-        style={(pressed) => ({
+        style={({ pressed }) => ({
           padding: 10,
           marginTop: 30,
           width: 110,
           borderWidth: 1.5,
           borderColor: "green",
+          borderRadius: 10,
           backgroundColor: pressed ? "green" : "white",
         })}
         onPressIn={() => {
@@ -67,7 +68,16 @@ export default function App() {
           alert("Bye Pressable");
         }}
       >
-        <Text>Press Me & Unpress Me</Text>
+        {({ pressed }) => (
+          <Text
+            style={{
+              color: pressed ? "white" : "black",
+              fontSize: pressed ? 20 : 16,
+            }}
+          >
+            Press Me & Unpress Me
+          </Text>
+        )}
       </Pressable>
     </View>
   );
