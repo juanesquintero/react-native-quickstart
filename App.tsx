@@ -24,6 +24,8 @@ export default function App() {
       <Text style={{ padding: 15 }}>Quick Start</Text>
 
       <View style={{ margin: 30 }}>
+        {/* NATIVE */}
+        {/* Not costumizable */}
         <Button
           title="Press me!"
           color="red"
@@ -32,6 +34,9 @@ export default function App() {
           }}
         />
       </View>
+
+      {/* CORE (Future-Deprecated) */}
+      {/* costumizable */}
 
       <TouchableHighlight
         style={{ padding: 10, borderWidth: 1.5, borderRadius: 100 }}
@@ -42,6 +47,9 @@ export default function App() {
       >
         <Text>Long press me!</Text>
       </TouchableHighlight>
+
+      {/* CORE (Recommended) */}
+      {/* costumizable */}
 
       <Pressable
         style={(pressed) => ({
