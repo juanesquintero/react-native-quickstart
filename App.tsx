@@ -15,15 +15,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-
       <Image
         source={icon}
         style={{ width: 100, height: 100 }}
         alt="I'm an Image"
       ></Image>
-
       <Text style={{ padding: 15 }}>Quick Start</Text>
-
       <View style={{ margin: 30 }}>
         {/* NATIVE */}
         {/* Not costumizable */}
@@ -35,10 +32,8 @@ export default function App() {
           }}
         />
       </View>
-
       {/* CORE (Future-Deprecated) */}
       {/* costumizable */}
-
       <TouchableHighlight
         style={{ padding: 10, borderWidth: 1.5, borderRadius: 100 }}
         underlayColor={"#09f"}
@@ -48,10 +43,8 @@ export default function App() {
       >
         <Text>Long press me!</Text>
       </TouchableHighlight>
-
       {/* CORE (Recommended) */}
       {/* costumizable */}
-
       <Pressable
         style={({ pressed }) => ({
           padding: 10,
@@ -80,6 +73,14 @@ export default function App() {
           </Text>
         )}
       </Pressable>
+      <Text
+        style={{
+          marginTop: 30,
+        }}
+      >
+        OS Version: {Constants.systemVersion}
+        Device Name: {Constants.deviceName}
+      </Text>
     </View>
   );
 }
