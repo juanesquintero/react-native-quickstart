@@ -9,6 +9,7 @@ import {
   Pressable,
 } from "react-native";
 import icon from "./assets/icon.png";
+import Constants from "expo-constants";
 
 export default function App() {
   return (
@@ -89,5 +90,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: Constants.statusBarHeight,
   },
 });
