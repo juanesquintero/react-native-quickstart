@@ -8,8 +8,10 @@ import {
 } from "react-native";
 import icon from "../assets/icon.png";
 import Constants from "expo-constants";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Main() {
+  const insets = useSafeAreaInsets();
   return (
     <View>
       <Image
