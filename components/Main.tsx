@@ -13,7 +13,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 export default function Main() {
   const insets = useSafeAreaInsets();
   return (
-    <View>
+    <View style={{ paddingTop: insets.top, paddingBottom: insets.bottom }}>
       <Image
         source={icon}
         style={{ width: 100, height: 100 }}
